@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="login_container">
+      <h1 class="login-title">Login</h1>
+      <form>
+        <div class="inner-container">
+          <label class="login-text" for="username">Username</label>
+          <input class="login-input" id="username" type="text">
+        </div>
+        <div class="inner-container">
+          <label class="login-text" for="password">Password</label>
+          <input class="login-input" id="password" type="password">
+        </div>
+        <button class="login-button" onclick="login()">
+          <span class="login-button-text">Login</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      event.preventDefault();
+      let username = document.getElementById("username").value;
+      let password = document.getElementById("password").value;
+
+      console.log({ username, password });
+
+      if (username === "Dani" && password === "boy") {
+        console.log("Bienvenido");
+      } else {
+        console.log("Credenciales incorrectas");
+      }
+    }
+  </script>
+</body>
+
+</html>
